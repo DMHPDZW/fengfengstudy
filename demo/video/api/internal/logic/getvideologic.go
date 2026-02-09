@@ -5,11 +5,9 @@ package logic
 
 import (
 	"context"
-	"fengfengstudy/user/rpc/types/user"
-
-	"fengfengstudy/video/api/internal/svc"
-	"fengfengstudy/video/api/internal/types"
-
+	"fengfengstudy/demo/user/rpc/types/user"
+	"fengfengstudy/demo/video/api/internal/svc"
+	"fengfengstudy/demo/video/api/internal/types"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

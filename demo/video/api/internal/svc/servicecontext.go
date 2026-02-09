@@ -4,8 +4,8 @@
 package svc
 
 import (
-	"fengfengstudy/user/rpc/userclient"
-	"fengfengstudy/video/api/internal/config"
+	"fengfengstudy/demo/user/rpc/userclient"
+	"fengfengstudy/demo/video/api/internal/config"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 

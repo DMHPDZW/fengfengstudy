@@ -6,16 +6,15 @@ package userclient
 
 import (
 	"context"
-
-	"fengfengstudy/user/rpc/types/user"
+	user2 "fengfengstudy/demo/user/rpc/types/user"
 
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"
 )
 
 type (
-	IdRequest    = user.IdRequest
-	UserResponse = user.UserResponse
+	IdRequest    = user2.IdRequest
+	UserResponse = user2.UserResponse
 
 	User interface {
 		GetUser(ctx context.Context, in *IdRequest, opts ...grpc.CallOption) (*UserResponse, error)
@@ -33,6 +32,6 @@ func NewUser(cli zrpc.Client) User {
 }
 
 func (m *defaultUser) GetUser(ctx context.Context, in *IdRequest, opts ...grpc.CallOption) (*UserResponse, error) {
-	client := user.NewUserClient(m.cli.Conn())
+	client := user2.NewUserClient(m.cli.Conn())
 	return client.GetUser(ctx, in, opts...)
 }

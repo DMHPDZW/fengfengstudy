@@ -2,9 +2,8 @@ package logic
 
 import (
 	"context"
-
-	"fengfengstudy/user/rpc/internal/svc"
-	"fengfengstudy/user/rpc/types/user"
+	"fengfengstudy/demo/user/rpc/internal/svc"
+	"fengfengstudy/demo/user/rpc/types/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

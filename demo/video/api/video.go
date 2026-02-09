@@ -4,12 +4,11 @@
 package main
 
 import (
+	"fengfengstudy/demo/video/api/internal/config"
+	"fengfengstudy/demo/video/api/internal/handler"
+	"fengfengstudy/demo/video/api/internal/svc"
 	"flag"
 	"fmt"
-
-	"fengfengstudy/video/api/internal/config"
-	"fengfengstudy/video/api/internal/handler"
-	"fengfengstudy/video/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"

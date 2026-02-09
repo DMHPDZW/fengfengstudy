@@ -1,13 +1,12 @@
 package main
 
 import (
+	"fengfengstudy/demo/user/rpc/internal/config"
+	"fengfengstudy/demo/user/rpc/internal/server"
+	"fengfengstudy/demo/user/rpc/internal/svc"
+	"fengfengstudy/demo/user/rpc/types/user"
 	"flag"
 	"fmt"
-
-	"fengfengstudy/user/rpc/internal/config"
-	"fengfengstudy/user/rpc/internal/server"
-	"fengfengstudy/user/rpc/internal/svc"
-	"fengfengstudy/user/rpc/types/user"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"

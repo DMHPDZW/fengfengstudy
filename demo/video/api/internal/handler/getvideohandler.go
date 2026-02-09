@@ -4,11 +4,11 @@
 package handler
 
 import (
+	"fengfengstudy/demo/video/api/internal/logic"
+	"fengfengstudy/demo/video/api/internal/svc"
+	"fengfengstudy/demo/video/api/internal/types"
 	"net/http"
 
-	"fengfengstudy/video/api/internal/logic"
-	"fengfengstudy/video/api/internal/svc"
-	"fengfengstudy/video/api/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 

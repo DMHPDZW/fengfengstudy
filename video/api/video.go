@@ -7,15 +7,15 @@ import (
 	"flag"
 	"fmt"
 
-	"fengfengstudy/api/internal/config"
-	"fengfengstudy/api/internal/handler"
-	"fengfengstudy/api/internal/svc"
+	"fengfengstudy/video/api/internal/config"
+	"fengfengstudy/video/api/internal/handler"
+	"fengfengstudy/video/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
 )
 
-var configFile = flag.String("f", "etc/api-api.yaml", "the config file")
+var configFile = flag.String("f", "etc/video.yaml", "the config file")
 
 func main() {
 	flag.Parse()

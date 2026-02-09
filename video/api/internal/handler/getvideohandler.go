@@ -6,22 +6,22 @@ package handler
 import (
 	"net/http"
 
-	"fengfengstudy/api/internal/logic"
-	"fengfengstudy/api/internal/svc"
-	"fengfengstudy/api/internal/types"
+	"fengfengstudy/video/api/internal/logic"
+	"fengfengstudy/video/api/internal/svc"
+	"fengfengstudy/video/api/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func ApiHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func getVideoHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.Request
+		var req types.VideoReq
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := logic.NewApiLogic(r.Context(), svcCtx)
-		resp, err := l.Api(&req)
+		l := logic.NewGetVideoLogic(r.Context(), svcCtx)
+		resp, err := l.GetVideo(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

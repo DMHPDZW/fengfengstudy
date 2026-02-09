@@ -6,27 +6,27 @@ package logic
 import (
 	"context"
 
-	"fengfengstudy/api/internal/svc"
-	"fengfengstudy/api/internal/types"
+	"fengfengstudy/video/api/internal/svc"
+	"fengfengstudy/video/api/internal/types"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type ApiLogic struct {
+type GetVideoLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-func NewApiLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ApiLogic {
-	return &ApiLogic{
+func NewGetVideoLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetVideoLogic {
+	return &GetVideoLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *ApiLogic) Api(req *types.Request) (resp *types.Response, err error) {
+func (l *GetVideoLogic) GetVideo(req *types.VideoReq) (resp *types.VideoRes, err error) {
 	// todo: add your logic here and delete this line
 
 	return

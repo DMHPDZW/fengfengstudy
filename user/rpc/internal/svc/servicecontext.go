@@ -1,11 +1,6 @@
-// Code scaffolded by goctl. Safe to edit.
-// goctl 1.9.2
-
 package svc
 
-import (
-	"fengfengstudy/api/internal/config"
-)
+import "fengfengstudy/user/rpc/internal/config"
 
 type ServiceContext struct {
 	Config config.Config

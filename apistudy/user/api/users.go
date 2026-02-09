@@ -4,17 +4,18 @@
 package main
 
 import (
-	"fengfengstudy/demo/video/api/internal/config"
-	"fengfengstudy/demo/video/api/internal/handler"
-	"fengfengstudy/demo/video/api/internal/svc"
 	"flag"
 	"fmt"
+
+	"fengfengstudy/apistudy/user/api/internal/config"
+	"fengfengstudy/apistudy/user/api/internal/handler"
+	"fengfengstudy/apistudy/user/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
 )
 
-var configFile = flag.String("f", "etc/video.yaml", "the config file")
+var configFile = flag.String("f", "etc/users.yaml", "the config file")
 
 func main() {
 	flag.Parse()

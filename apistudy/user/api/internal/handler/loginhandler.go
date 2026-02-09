@@ -4,24 +4,24 @@
 package handler
 
 import (
-	"fengfengstudy/demo/video/api/internal/logic"
-	"fengfengstudy/demo/video/api/internal/svc"
-	"fengfengstudy/demo/video/api/internal/types"
 	"net/http"
 
+	"fengfengstudy/apistudy/user/api/internal/logic"
+	"fengfengstudy/apistudy/user/api/internal/svc"
+	"fengfengstudy/apistudy/user/api/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func getVideoHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func loginHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.VideoReq
+		var req types.LoginRequest
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := logic.NewGetVideoLogic(r.Context(), svcCtx)
-		resp, err := l.GetVideo(&req)
+		l := logic.NewLoginLogic(r.Context(), svcCtx)
+		resp, err := l.Login(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

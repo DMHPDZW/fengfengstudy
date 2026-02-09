@@ -1,7 +1,10 @@
+// Code scaffolded by goctl. Safe to edit.
+// goctl 1.9.2
+
 package svc
 
 import (
-	"fengfengstudy/demo/user/rpc/internal/config"
+	"fengfengstudy/apistudy/user/api/internal/config"
 )
 
 type ServiceContext struct {
